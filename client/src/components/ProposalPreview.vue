@@ -89,7 +89,7 @@ const generatePDF = async () => {
   try {
     console.log(props.proposal);
 
-    const res = await fetch(`${BASE_URL}/proposals`, {
+    const res = await fetch(`${BASE_URL}/api/proposals`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
