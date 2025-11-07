@@ -1,6 +1,3 @@
-.gitignore
-client/.gitignore
-
 
 server/node_modules
 server/.env
