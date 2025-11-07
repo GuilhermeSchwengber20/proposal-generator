@@ -78,8 +78,8 @@
 </template>
 
 <script setup lang="ts">
-import { event } from 'vue-gtag'
-
+import { useGtag } from 'vue-gtag-next'
+const { event } = useGtag()
 const props = defineProps<{ proposal: any }>();
 
 
@@ -107,7 +107,10 @@ const generatePDF = async () => {
     const url = URL.createObjectURL(blob);
 
     window.open(url, '_blank');
-    event('generatePdf', { pdf_gerado: true })
+    event('generate_proposal', {
+      category: 'Proposal',
+      label: 'PDF generated test',
+    })
 
 
 
